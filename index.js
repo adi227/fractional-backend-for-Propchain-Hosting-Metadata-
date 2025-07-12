@@ -58,11 +58,12 @@ cron.schedule('0 */12 * * *', () => {
   });
 });
 
+// Root endpoint for health check or browser visit
 app.get('/', (req, res) => {
-  res.send("Fractional Real Estate Metadata API is running.");
+  res.send("Fractional Real Estate Metadata API is live and hosted on Render.");
 });
 
 // Start the server
 app.listen(PORT, () => {
-  console.log(`Metadata API running at http://localhost:${PORT}`);
+  console.log("Metadata API is running. Access it at: https://fractional-backend-for-propchain-hosting.onrender.com");
 });
